@@ -8,3 +8,4 @@ PyAudio
 streamlit
 streamlit-tags
 vosk
+pyttsx3
