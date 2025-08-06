@@ -1,5 +1,5 @@
 // In order to manage user activity in the browser, one special endpoint was prepared.
-API_URL = "http://localhost:5000/browser/activity"
+API_URL = "http://127.0.0.1:5000/browser/activity"
 
 // One function that sends data to fronted ('content.js') as an immediate response from the backend
 function sendDataToContent(jsonData){
