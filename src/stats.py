@@ -12,6 +12,12 @@ st.set_page_config(
     layout = "wide"
 )
 
+
+# Create an object to fetch data from SqliteDB and ChromaDB
+app_history = History()
+df_sql = app_history.read_from_sqlite()
+
+
 with st.sidebar:
     st.header(
         body="Statistics and History",
@@ -25,10 +31,10 @@ with st.sidebar:
         **The second option** is to check whether a given activity was performed on the computer by **searching** the **vector database** of desktop screenshots based on the **description**.
     """)
 
+    if df_sql.empty:
+        st.info("DB is empty", icon="💡")
+        st.stop()
 
-# Create an object to fetch data from SqliteDB and ChromaDB
-app_history = History()
-df_sql = app_history.read_from_sqlite()
 
 # To datetime and get the date
 df_sql["created_at"] = pd.to_datetime(df_sql["created_at"])
