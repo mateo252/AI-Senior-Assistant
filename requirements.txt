@@ -1,0 +1,10 @@
+Flask
+requests
+pandas
+chromadb
+json-repair
+mss
+PyAudio
+streamlit
+streamlit-tags
+vosk
