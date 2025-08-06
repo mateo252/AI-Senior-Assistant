@@ -1,10 +1,13 @@
-# ✨ AI-Senior-Assistant
+# AI-Senior-Assistant
 This project was created as part of the implementation of the competition task on the 🔗[Kaggle](https://www.kaggle.com/competitions/google-gemma-3n-hackathon) platform.
 The task was to leverage the unique capabilities of Gemma3n to create a product that addresses a significant real-world challenge.
 
 The prepared solution presents the use of Gemma3n as an intelligent assistant whose purpose is to protect and navigate seniors in the online environment and during daily computer use. This should contribute to increasing the independence and self-confidence of seniors when using new technological solutions.
 
+*The app was made for `Windows`
+
 ## Setup
+
 Download a repository
 ```
 > git clone https://github.com/mateo252/AI-Senior-Assistant.git
@@ -54,7 +57,8 @@ The purpose of this field is to tell the model what language you want its respon
     }
 }
 ```
-The same applies to the key `prompts_settings.user_level`. You can add a new one or change the name.
+The same applies to the key `prompts_settings.user_level`. You can add a new one or change the name.<br>
+For the key `user_settings.model`, the specified model must be downloaded early using Ollama.
 
 Other settigns:
 - `ollama_settings` - allows to change the constant variables for ollama used in the application. At the moment the default settings are used,
@@ -63,7 +67,7 @@ Other settigns:
 - `screenshot_settings.interval` - screnshot interval in seconds,
 - `screenshot_settings.screen` - screen number (all -1),
 
-Add the extension to your browser. 
+Add the extension to your browser.<br>
 Go to `chrome://extensions`, enable `developer mode` and `Load unpacked`, then select the `extension` folder.
 
 Methods of starting the application
