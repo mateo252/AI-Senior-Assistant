@@ -7,7 +7,6 @@ import subprocess
 import threading
 import requests
 import time
-import sys
 import os
 
 
@@ -32,10 +31,6 @@ class MainGUI:
         self.bg_accept_color = self.config["colors_settings"]["bg_accept_status"]
         self.bg_error_color = self.config["colors_settings"]["bg_error_status"]
 
-        os.makedirs(os.path.join(
-            os.path.dirname(os.path.abspath(sys.argv[0])),
-            "hsitory"
-        ), exist_ok=True)
         self.screenshot = ScreenShot(self.config)
 
         self.main_menu()

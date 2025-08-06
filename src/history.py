@@ -11,6 +11,11 @@ class History:
     def __init__(self) -> None:
         
         self.is_chat = False
+        os.makedirs(os.path.join(
+            os.path.dirname(os.path.abspath(sys.argv[0])),
+            "history"
+        ), exist_ok=True)
+        
         self.history_path = os.path.join(
             os.path.dirname(os.path.abspath(sys.argv[0])),
             "history"

@@ -13,7 +13,12 @@ class ScreenShot:
         self.image_format = self.config["screenshot_settings"]["format"]
         self.monitor_id = self.config["screenshot_settings"]["screen"]
 
+
         main_file_path = os.path.dirname(os.path.abspath(sys.argv[0]))
+        os.makedirs(os.path.join(
+            main_file_path,
+            "history"
+        ), exist_ok=True)
         self.tmp_screens_path = os.path.join(main_file_path, "history", "tmp")
         os.makedirs(self.tmp_screens_path, exist_ok=True)
 
