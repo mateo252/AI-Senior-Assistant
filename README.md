@@ -63,6 +63,9 @@ Other settigns:
 - `screenshot_settings.interval` - screnshot interval in seconds,
 - `screenshot_settings.screen` - screen number (all -1),
 
+Add the extension to your browser. 
+Go to `chrome://extensions`, enable `developer mode` and `Load unpacked`, then select the `extension` folder.
+
 Methods of starting the application
 ```
 (venv) > py main.py             // if you want to run assistant
